@@ -10,5 +10,5 @@ public class MemberApiServerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MemberApiServerApplication.class, args);
-    } 
+    }    
 }
