@@ -1,24 +1,22 @@
 package com.moviemang.coreutils.utils.httpclient;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
-import com.mashape.unirest.http.HttpResponse;
-import com.mashape.unirest.http.JsonNode;
-import com.mashape.unirest.http.ObjectMapper;
-import com.mashape.unirest.http.Unirest;
-import com.moviemang.coreutils.model.vo.HttpClientRequest;
-import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
-
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.ObjectMapper;
+import com.mashape.unirest.http.Unirest;
+import com.moviemang.coreutils.model.vo.HttpClientRequest;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
@@ -49,8 +47,11 @@ public class HttpClient<T> {
 
     }
 
+    /* StringUtils.isEmpty() => deprecate 되어서 hasText()로 대체
+     * 인자가 null이 들어올 경우 false를 반환합니다.
+    */
     public static String get(HttpClientRequest httpClientRequest) throws Exception {
-        Map<String, Object> params = httpClientRequest.getData().entrySet().stream().filter(d -> !StringUtils.isEmpty(d.getValue())).collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
+        Map<String, Object> params = httpClientRequest.getData().entrySet().stream().filter(d -> StringUtils.hasText(d.getValue().toString())).collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
         HttpResponse<JsonNode> response = Unirest.get(httpClientRequest.getUrl())
                 .headers(httpClientRequest.getHeader())
                 .queryString(params)
@@ -60,7 +61,7 @@ public class HttpClient<T> {
     }
 
     public static <T> T getGenieric(HttpClientRequest httpClientRequest, Class<T> classOfT) throws Exception {
-        Map<String, Object> params = httpClientRequest.getData().entrySet().stream().filter(d -> !StringUtils.isEmpty(d.getValue())).collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
+        Map<String, Object> params = httpClientRequest.getData().entrySet().stream().filter(d -> StringUtils.hasText(d.getValue().toString())).collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
 
         HttpResponse<T> response = Unirest.get(httpClientRequest.getUrl())
                 .headers(httpClientRequest.getHeader())
