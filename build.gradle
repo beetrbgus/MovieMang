@@ -30,7 +30,10 @@ allprojects {
     dependencies {
     	/* starter */
     	implementation 'org.springframework.boot:spring-boot-starter'
-    	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    	
+    	testImplementation('org.springframework.boot:spring-boot-starter-test'){
+    		exclude group: 'com.vaadin.external.google'
+    	}
     	
         /* devtools */
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
@@ -49,6 +52,7 @@ allprojects {
         /* junit*/
         testImplementation group: 'junit', name: 'junit', version: '4.13.2'
         implementation('com.mashape.unirest:unirest-java:1.4.9')
+        
     }
 }
 
@@ -66,6 +70,7 @@ project(':apis:member-api-server'){
     dependencies {
         compileOnly project(':core:core-utils')
         compileOnly project(':core:datastore')
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }
 
@@ -73,6 +78,7 @@ project(':apis:main-api-server'){
     dependencies {
         compileOnly project(':core:core-utils')
         compileOnly project(':core:datastore')
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }
 
@@ -80,11 +86,13 @@ project(':apis:playlist-api-server'){
     dependencies {
         compileOnly project(':core:core-utils')
         compileOnly project(':core:datastore')
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }
 
 project(':core:datastore'){
     dependencies {
         compileOnly project(':core:core-utils')
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }
