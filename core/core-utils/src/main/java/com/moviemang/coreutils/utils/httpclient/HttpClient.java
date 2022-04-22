@@ -47,9 +47,6 @@ public class HttpClient<T> {
 
     }
 
-    /* StringUtils.isEmpty() => deprecate 되어서 hasText()로 대체
-     * 인자가 null이 들어올 경우 false를 반환합니다.
-    */
     public static String get(HttpClientRequest httpClientRequest) throws Exception {
         Map<String, Object> params = httpClientRequest.getData().entrySet().stream().filter(d -> StringUtils.hasText(d.getValue().toString())).collect(Collectors.toMap(o -> o.getKey(), o -> o.getValue()));
         HttpResponse<JsonNode> response = Unirest.get(httpClientRequest.getUrl())

@@ -71,8 +71,8 @@ ext {
 
 project(':apis:member-api-server'){
     dependencies {
-        compileOnly project(':core:core-utils')
-        compileOnly project(':core:datastore')
+        implementation project(':core:core-utils')
+        implementation project(':core:datastore')
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }

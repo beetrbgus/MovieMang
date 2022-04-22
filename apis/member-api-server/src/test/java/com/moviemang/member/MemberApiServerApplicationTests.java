@@ -5,6 +5,8 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
+import com.moviemang.datastore.domain.member.Member;
+import com.moviemang.datastore.repository.member.MemberRepository;
 import org.hibernate.validator.constraints.Length;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +15,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class MemberApiServerApplicationTests {
 
-
 	@Autowired
 	private MemberRepository memberRepository;
-	
+
+
     @Test
     void contextLoads() {
     	Member member = new Member();
