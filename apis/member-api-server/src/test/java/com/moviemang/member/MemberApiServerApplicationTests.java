@@ -18,10 +18,10 @@ import com.moviemang.datastore.repository.member.MemberRepository;
 @SpringBootTest
 class MemberApiServerApplicationTests {
 
-
 	@Autowired
 	private MemberRepository memberRepository;
-	
+
+
     @Test
     void contextLoads() {
     	Member member = Member.builder()
