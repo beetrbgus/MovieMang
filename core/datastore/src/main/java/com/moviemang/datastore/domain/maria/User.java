@@ -24,6 +24,6 @@ public class User{
 //    @SequenceGenerator(name = "user_id_seq",sequenceName="user_id_seq", allocationSize=1)
     private Long id;
     private String email;
-    private String userName;
+    private String username;
     private String password;
 }
