@@ -30,11 +30,6 @@ class MemberApiServerApplicationTests {
     			.memberPassword("gieiengien2")
     			.build();
     	
-    	Member member = new Member();
-    	member.setMemberName("TestNick1");
-    	member.setMemberEmail("testUser1@gmail.com");
-    	member.setMemberPassword("gieiengien2");
-    	
     	memberRepository.save(member);
     }
 
