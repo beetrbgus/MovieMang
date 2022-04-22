@@ -1,9 +1,9 @@
 dependencies {
     	/* DataBase */
-        implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+//        implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
         implementation 'org.mariadb.jdbc:mariadb-java-client:1.7.4'
         
         runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-        /* À¯È¿¼º °ËÁõ À§ÇÑ Validation*/
+        /* ï¿½ï¿½È¿ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Validation*/
         implementation 'org.springframework.boot:spring-boot-starter-validation'
 }

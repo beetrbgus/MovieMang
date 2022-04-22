@@ -1,11 +1,10 @@
-package com.moviemang;
+package com.moviemang.security;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class MoviemangApplicationTests {
+class SecurityApplicationTests {
 
     @Test
     void contextLoads() {

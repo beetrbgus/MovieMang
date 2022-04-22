@@ -1,7 +1,8 @@
+server:
+  shutdown: graceful
+  port: 8080
 spring:
   profiles:
     active: local
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  lifecycle:
+    timeout-per-shutdown-phase: 20s

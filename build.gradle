@@ -28,30 +28,22 @@ allprojects {
     }
 
     dependencies {
-    	/* starter */
     	implementation 'org.springframework.boot:spring-boot-starter'
-    	
     	testImplementation('org.springframework.boot:spring-boot-starter-test'){
     		exclude group: 'com.vaadin.external.google'
     	}
-    	
-        /* devtools */
         developmentOnly 'org.springframework.boot:spring-boot-devtools'
-        /* lombok */
         compileOnly 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
-		
-        /* RestDocs */
         testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
         implementation 'org.springframework.boot:spring-boot-starter-web'
-        /* common Util */
         implementation 'org.apache.commons:commons-lang3:3.5'
         implementation 'org.apache.commons:commons-collections4:4.1'
 		implementation 'com.google.guava:guava:31.1-jre'
-        
-        /* junit*/
         testImplementation group: 'junit', name: 'junit', version: '4.13.2'
         implementation('com.mashape.unirest:unirest-java:1.4.9')
+        implementation "mysql:mysql-connector-java"
+        implementation 'org.mariadb.jdbc:mariadb-java-client'
         
     }
 }
@@ -68,8 +60,9 @@ ext {
 
 project(':apis:member-api-server'){
     dependencies {
-        compileOnly project(':core:core-utils')
-        compileOnly project(':core:datastore')
+        implementation project(':core:core-utils')
+        implementation project(':core:datastore')
+        implementation project(':core:security')
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     }
 }
@@ -94,5 +87,11 @@ project(':core:datastore'){
     dependencies {
         compileOnly project(':core:core-utils')
         implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    }
+}
+project(':core:security'){
+    dependencies {
+        compileOnly project(':core:core-utils')
+        compileOnly project(':core:datastore')
     }
 }
