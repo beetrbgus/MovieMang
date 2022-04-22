@@ -10,12 +10,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.moviemang.datastore.domain.member.Member;
-import com.moviemang.datastore.repository.member.MemberRepository;
-
 @SpringBootTest
 class MemberApiServerApplicationTests {
-		
+
+
 	@Autowired
 	private MemberRepository memberRepository;
 	
