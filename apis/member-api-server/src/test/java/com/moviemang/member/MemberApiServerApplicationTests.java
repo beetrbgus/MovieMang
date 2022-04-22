@@ -1,20 +1,14 @@
 package com.moviemang.member;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-
 import com.moviemang.datastore.domain.member.Member;
-import com.moviemang.datastore.repository.member.MemberRepository;
-import org.hibernate.validator.constraints.Length;
+import com.moviemang.datastore.repository.maria.MemberRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.moviemang.datastore.domain.member.Member;
-import com.moviemang.datastore.repository.member.MemberRepository;
+import org.springframework.context.annotation.Profile;
 
+@Profile("local")
 @SpringBootTest
 class MemberApiServerApplicationTests {
 
