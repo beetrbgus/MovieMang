@@ -5,3 +5,13 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+##로깅 설정
+logging:
+  file: 
+    path: /moviemang/logs
+    name: member-api.log
+  level : 
+    root : info
+    org : 
+      springframework : 
+        security : debug

@@ -37,13 +37,13 @@ public class MariaDataSourceConfig {
     public LocalContainerEntityManagerFactoryBean testEntityManager() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        //Entity 패키지 경로
-        em.setPackagesToScan(new String[] { "com.action.in.datastore.domain" });
+        //Entity �뙣�궎吏� 寃쎈줈
+        em.setPackagesToScan(new String[] { "com.moviemang.datastore.domain" });
 
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
 
-        //Hibernate 설정
+        //Hibernate �꽕�젙
         HashMap<String, Object> properties = new HashMap<>();
         properties.put("hibernate.hbm2ddl.auto","update");
         properties.put("hibernate.dialect","org.hibernate.dialect.MariaDB103Dialect");
