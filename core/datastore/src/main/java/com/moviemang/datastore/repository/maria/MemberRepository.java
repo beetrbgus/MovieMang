@@ -1,4 +1,4 @@
-package com.moviemang.datastore.repository.member;
+package com.moviemang.datastore.repository.maria;
 
 import org.springframework.data.repository.CrudRepository;
 

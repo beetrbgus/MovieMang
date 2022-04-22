@@ -311,3 +311,144 @@ Current charset is UTF-8. If password has been set using other charset, consider
 	at org.mariadb.jdbc.internal.protocol.AbstractConnectProtocol.connectWithoutProxy(AbstractConnectProtocol.java:1389) ~[mariadb-java-client-2.7.5.jar:na]
 	... 53 common frames omitted
 
+2022-04-23 00:42:26.410  INFO 60251 --- [restartedMain] c.m.member.MemberApiServerApplication    : Starting MemberApiServerApplication using Java 1.8.0_252 on jooheeyeon-MacBookPro.local with PID 60251 (/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main started by jooheeyeon in /Users/jooheeyeon/IdeaProjects/study/46/moviemang)
+2022-04-23 00:42:26.412  INFO 60251 --- [restartedMain] c.m.member.MemberApiServerApplication    : The following 1 profile is active: "local"
+2022-04-23 00:42:26.468  INFO 60251 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-23 00:42:26.468  INFO 60251 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-23 00:42:27.495  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 00:42:27.496  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 00:42:27.530  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-04-23 00:42:28.303  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 00:42:28.360  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-23 00:42:28.423  INFO 60251 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.moviemang.datastore.repository.maria.MemberRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-04-23 00:42:28.425  INFO 60251 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 0 MongoDB repository interfaces.
+2022-04-23 00:42:30.946  INFO 60251 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-23 00:42:30.964  INFO 60251 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 00:42:30.965  INFO 60251 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-23 00:42:31.077  INFO 60251 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 00:42:31.077  INFO 60251 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4609 ms
+2022-04-23 00:42:31.482  INFO 60251 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 00:42:31.586  INFO 60251 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-23 00:42:32.022  INFO 60251 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 00:42:32.423  INFO 60251 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-23 00:42:32.561  INFO 60251 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-23 00:42:32.591  INFO 60251 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-04-23 00:42:33.648  INFO 60251 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 00:42:33.659  INFO 60251 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 00:42:33.668  WARN 60251 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl' defined in file [/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main/com/moviemang/member/service/MemberServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-04-23 00:42:33.669  INFO 60251 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 00:42:33.670  INFO 60251 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-23 00:42:33.698  INFO 60251 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-23 00:42:33.700  INFO 60251 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-23 00:42:33.713  INFO 60251 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-23 00:42:33.736 ERROR 60251 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.moviemang.member.service.MemberServiceImpl required a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' in your configuration.
+
+2022-04-23 00:44:48.080  INFO 60363 --- [restartedMain] c.m.member.MemberApiServerApplication    : Starting MemberApiServerApplication using Java 1.8.0_252 on jooheeyeon-MacBookPro.local with PID 60363 (/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main started by jooheeyeon in /Users/jooheeyeon/IdeaProjects/study/46/moviemang)
+2022-04-23 00:44:48.082  INFO 60363 --- [restartedMain] c.m.member.MemberApiServerApplication    : The following 1 profile is active: "local"
+2022-04-23 00:44:48.131  INFO 60363 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-23 00:44:48.131  INFO 60363 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-23 00:44:49.165  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 00:44:49.166  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 00:44:49.188  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2022-04-23 00:44:49.403  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 00:44:49.404  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-23 00:44:49.419  INFO 60363 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.moviemang.datastore.repository.maria.MemberRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-04-23 00:44:49.420  INFO 60363 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2022-04-23 00:44:49.975  INFO 60363 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-23 00:44:49.984  INFO 60363 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 00:44:49.985  INFO 60363 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-23 00:44:50.051  INFO 60363 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 00:44:50.051  INFO 60363 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1919 ms
+2022-04-23 00:44:50.170  INFO 60363 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 00:44:50.238  INFO 60363 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-23 00:44:50.459  INFO 60363 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 00:44:50.570  INFO 60363 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-23 00:44:50.615  INFO 60363 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-23 00:44:50.629  INFO 60363 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-04-23 00:44:51.232  INFO 60363 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 00:44:51.240  INFO 60363 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 00:44:51.249  WARN 60363 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl' defined in file [/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main/com/moviemang/member/service/MemberServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-04-23 00:44:51.249  INFO 60363 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 00:44:51.250  INFO 60363 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-23 00:44:51.263  INFO 60363 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-23 00:44:51.265  INFO 60363 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-23 00:44:51.273  INFO 60363 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-23 00:44:51.290 ERROR 60363 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.moviemang.member.service.MemberServiceImpl required a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' in your configuration.
+
+2022-04-23 01:07:03.330  INFO 61379 --- [restartedMain] c.m.member.MemberApiServerApplication    : Starting MemberApiServerApplication using Java 1.8.0_252 on jooheeyeon-MacBookPro.local with PID 61379 (/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main started by jooheeyeon in /Users/jooheeyeon/IdeaProjects/study/46/moviemang)
+2022-04-23 01:07:03.331  INFO 61379 --- [restartedMain] c.m.member.MemberApiServerApplication    : The following 1 profile is active: "local"
+2022-04-23 01:07:03.374  INFO 61379 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-23 01:07:03.375  INFO 61379 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-23 01:07:04.357  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 01:07:04.358  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-23 01:07:04.380  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2022-04-23 01:07:04.537  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-04-23 01:07:04.538  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-23 01:07:04.554  INFO 61379 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.moviemang.datastore.repository.maria.MemberRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-04-23 01:07:04.555  INFO 61379 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 MongoDB repository interfaces.
+2022-04-23 01:07:05.110  INFO 61379 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-04-23 01:07:05.118  INFO 61379 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 01:07:05.118  INFO 61379 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-23 01:07:05.184  INFO 61379 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 01:07:05.184  INFO 61379 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1809 ms
+2022-04-23 01:07:05.297  INFO 61379 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-23 01:07:05.367  INFO 61379 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-23 01:07:05.591  INFO 61379 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-23 01:07:05.701  INFO 61379 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-23 01:07:05.745  INFO 61379 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-23 01:07:05.760  INFO 61379 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-04-23 01:07:06.363  INFO 61379 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-23 01:07:06.372  INFO 61379 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 01:07:06.381  WARN 61379 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'memberServiceImpl' defined in file [/Users/jooheeyeon/IdeaProjects/study/46/moviemang/apis/member-api-server/build/classes/java/main/com/moviemang/member/service/MemberServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2022-04-23 01:07:06.382  INFO 61379 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 01:07:06.383  INFO 61379 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-04-23 01:07:06.397  INFO 61379 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-04-23 01:07:06.399  INFO 61379 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-04-23 01:07:06.417  INFO 61379 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-04-23 01:07:06.440 ERROR 61379 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.moviemang.member.service.MemberServiceImpl required a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.moviemang.datastore.repository.maria.MemberRepository' in your configuration.
+
