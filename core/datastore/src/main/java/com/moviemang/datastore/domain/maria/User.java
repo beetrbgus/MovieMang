@@ -18,10 +18,8 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class User{
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @SequenceGenerator(name = "user_id_seq",sequenceName="user_id_seq", allocationSize=1)
     private Long id;
     private String email;
     private String username;

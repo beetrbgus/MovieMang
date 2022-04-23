@@ -2,8 +2,11 @@ dependencies {
     	/* DataBase */
 //        implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
         implementation 'org.mariadb.jdbc:mariadb-java-client:1.7.4'
-        
-        runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
-        /* ��ȿ�� ���� ���� Validation*/
         implementation 'org.springframework.boot:spring-boot-starter-validation'
+        implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+        implementation "mysql:mysql-connector-java"
+        implementation 'org.mariadb.jdbc:mariadb-java-client'
+        implementation 'org.mongodb:mongo-java-driver:3.12.7'
+        implementation group: 'org.hibernate.ogm', name: 'hibernate-ogm-mongodb', version: '5.4.1.Final'
+
 }
